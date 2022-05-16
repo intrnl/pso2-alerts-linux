@@ -1,4 +1,4 @@
-import { formatDistance } from "https://cdn.jsdelivr.net/npm/date-fns@2.28.0/+esm";
+import formatDistance from "https://cdn.jsdelivr.net/npm/date-fns@2.28.0/esm/formatDistance/index.js";
 
 const URL = 'https://cdn.arks-layer.com/api/events_na.txt';
 const TIMEZONE_OFFSET = '-07:00';
