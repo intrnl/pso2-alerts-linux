@@ -43,7 +43,7 @@ async function main () {
 	const command = [
 		'notify-send',
 		`--app-name=${'PSO2 Alerts'}`,
-		'Upcoming urgent quests',
+		'Upcoming events',
 		desc,
 	];
 
