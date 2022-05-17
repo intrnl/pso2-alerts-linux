@@ -4,8 +4,6 @@ const URL = 'https://cdn.arks-layer.com/api/events_na.txt';
 const TIMEZONE_OFFSET = '-07:00';
 const USER_AGENT = 'github:intrnl/pso2-alerts-linux';
 
-const CACHE_FILE = './current.txt';
-
 const RE_EVENTS = /^(?<date>.+)\|(?<type>.+)\|(?<event>.+)\|(?<battle_power>.+)$/gm;
 const RE_DATE = /^(?<month>\d{2})\/(?<day>\d{2})\/(?<year>\d{4}) (?<hour>\d{2}):(?<minute>\d{2}) (?<period>AM|PM)$/;
 
