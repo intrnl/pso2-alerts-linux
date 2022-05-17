@@ -54,9 +54,9 @@ async function main () {
 
 	const command = [
 		'notify-send',
-		`-a ${JSON.stringify('PSO2 Alerts')}`,
-		JSON.stringify('Upcoming urgent quests'),
-		JSON.stringify(desc),
+		`--app-name=${'PSO2 Alerts'}`,
+		'Upcoming urgent quests',
+		desc,
 	];
 
 	const p = Deno.run({ cmd: command });
