@@ -16,18 +16,6 @@ async function main () {
 	
 	const response = await fetch(URL, { headers: { 'user-agent': USER_AGENT } });
 	const next = await response.text();
-	
-	try {
-		const curr = await Deno.readTextFile(CACHE_FILE);
-
-		if (curr === next) {
-			console.log(`nothing changed`);
-			return;
-		}
-	}
-	catch (error) {}
-
-	await Deno.writeTextFile(CACHE_FILE, next);
 
 	if (!next) {
 		return;
