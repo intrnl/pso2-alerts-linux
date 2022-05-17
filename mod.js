@@ -43,6 +43,8 @@ async function main () {
 	const command = [
 		'notify-send',
 		`--app-name=${'PSO2 Alerts'}`,
+		`--hint=string:desktop-entry:org.kde.konsole`,
+		`--icon=dialog-information`,
 		'Upcoming urgent quests',
 		desc,
 	];
