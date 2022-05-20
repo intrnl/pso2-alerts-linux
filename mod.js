@@ -56,7 +56,7 @@ function parseEvents (source) {
 		const { date, type, event, battle_power } = match.groups;
 		const { month, day, year, hour, minute, period } = RE_DATE.exec(date).groups;
 
-		const hour24 = ('' + (+hour + ((period === 'PM' ? 12 : 0) % 24))).padStart(2, '0');
+		const hour24 = ('' + (+(hour === '12' ? '0' : hour) + (period === 'PM' ? 12 : 0))).padStart(2, '0');
 		const timestamp = `${year}-${month}-${day}T${hour24}:${minute}:00.000${TIMEZONE_OFFSET}`;
 
 		events.push({
