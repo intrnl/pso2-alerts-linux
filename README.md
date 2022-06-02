@@ -1,8 +1,7 @@
 Deno script to retrieve upcoming urgent quests for
 Phantasy Star Online 2: New Genesis.
 
-![Screenshot_20220517_192043](https://user-images.githubusercontent.com/20620901/168813361-71e894a6-cf34-4709-be51-b2a3d63e0c8b.png)
-
+![Screenshot_20220602_114638](https://user-images.githubusercontent.com/20620901/171554860-f2d4296d-5c43-4ecd-9da4-915491ddbc7a.png)
 
 This isn't a complete solution, you'd want to set up a timer unit or a cronjob
 that would actually run the script on a given interval. The following is an
