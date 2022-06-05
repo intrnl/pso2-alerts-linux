@@ -30,10 +30,6 @@ async function main () {
 		const event = events[i];
 		const date = new Date(event.timestamp);
 
-		if (i > 0) {
-			desc += '\n';
-		}
-
 		// skip events that are more than 30 minutes ago,
 		// it seems that the events are not always updated
 		if ((now - date) > 30 * 60 * 1000) {
@@ -42,6 +38,8 @@ async function main () {
 		}
 
 		console.log(`[${event.type}] ${event.event_name}`);
+
+		desc && (desc += '\n');
 		desc += `<i>${formatDistance(date, now, { addSuffix: true })}</i> - ${event.event_name}`;
 	}
 
