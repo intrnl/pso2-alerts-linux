@@ -30,10 +30,13 @@ async function main () {
 		const event = events[i];
 		const date = new Date(event.timestamp);
 
-		// skip events that are more than 30 minutes ago,
-		// it seems that the events are not always updated
-		if ((now - date) > 30 * 60 * 1000) {
-			console.log(`[SKIP] ${event.event_name}`);
+		const diff = now - date;
+
+		// skip events that are more than 30 minutes ago, and 6 hours ahead
+		// former because sometimes events are not always updated,
+		// latter because of scheduled events
+		if (diff > 30 * 60 * 1000 || diff < -6 * 60 * 60 * 1000) {
+			console.log(`[SKIP]`, event.event_name, diff);
 			continue;
 		}
 
