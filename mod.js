@@ -43,7 +43,7 @@ async function main () {
 		console.log(`[${event.type}] ${event.event_name}`);
 
 		desc && (desc += '\n');
-		desc += `<i>${formatDistance(date, now, { addSuffix: true })}</i> - ${event.event_name}`;
+		desc += `${formatDistance(date, now, { addSuffix: true })} - ${event.event_name}`;
 	}
 
 	// nothing to actually report, let's skip
